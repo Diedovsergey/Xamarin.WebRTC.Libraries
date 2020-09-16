@@ -47,7 +47,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="WebRTC.Droid.Binding">
-      <HintPath>..\..\..\Documents\GitHub\webrtc-h113\src\WebRTC.Droid.Binding\bin\Release\WebRTC.Droid.Binding.dll</HintPath>
+      <HintPath>..\lib\WebRTC.Droid.Binding.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebRTC\WebRTC.csproj">
