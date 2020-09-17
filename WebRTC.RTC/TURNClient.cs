@@ -69,7 +69,10 @@ namespace WebRTC.RTC
                             server => server.Username,
                             server => (server.Credential, server.Url),
                             (username, cred_url) =>
-                            new IceServer(urls: cred_url.Select(cu => cu.Url).ToArray(), username: username, password: cred_url.Select(cu => cu.Credential).Distinct().FirstOrDefault())
+                            new IceServer(urls: cred_url.Select(
+                                cu => cu.Url).ToArray(), 
+                                username: username, password:
+                                cred_url.Select(cu => cu.Credential).Distinct().FirstOrDefault())
                         ).ToArray();
 
                         return groupedServers;

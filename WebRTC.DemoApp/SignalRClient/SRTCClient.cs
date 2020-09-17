@@ -66,7 +66,7 @@ namespace WebRTC.DemoApp.SignalRClient
                 State = ConnectionState.New;
                 //TODO: Call SignalR Hub Connect To Room; This returns The relevant Room Parameters and potential errors if available.
                 //await App.HubConnection.StartAsync();
-                var str = await App.HubConnection.InvokeAsync<string>("GetRoomParametersAsync", roomConnectionParameters.RoomId, roomConnectionParameters.IsInitator, "https://global.xirsys.net/_turn/DemoWebRTC");
+                var str = await App.HubConnection.InvokeAsync<string>("GetRoomParametersAsync", roomConnectionParameters.RoomId, roomConnectionParameters.IsInitiator, "https://global.xirsys.net/_turn/DemoWebRTC");
                 var roomSObject = JObject.Parse(str);
                 var roomParams = roomSObject.ToObject<RoomParameterResponse>();
                 var _roomSignalingParameters = new SignalingParameters

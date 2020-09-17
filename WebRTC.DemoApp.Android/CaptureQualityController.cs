@@ -5,7 +5,7 @@ using System.Linq;
 
 using Android.Widget;
 
-using Org.Webrtc;
+using Org.Webrtc; //TODO try to remove all links to lib
 
 using WebRTC.DemoApp.Droid.Fragments;
 

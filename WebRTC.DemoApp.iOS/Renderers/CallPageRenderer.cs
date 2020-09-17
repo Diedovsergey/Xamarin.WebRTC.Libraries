@@ -142,7 +142,7 @@ namespace WebRTC.DemoApp.iOS.Renderers
             controller.Connect(new RoomConnectionParameters
             {
                 RoomId = RoomId,
-                IsInitator = IsInitator,
+                IsInitiator = IsInitator,
                 IsLoopback = false
             });
         }

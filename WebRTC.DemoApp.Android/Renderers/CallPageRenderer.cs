@@ -6,7 +6,7 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 
-using Org.Webrtc;
+using Org.Webrtc; //TODO try to remove all links to lib
 
 using WebRTC.Android;
 using WebRTC.Android.Extensions;
@@ -33,7 +33,7 @@ namespace WebRTC.DemoApp.Droid.Renderers
         #region Properties and Variables
 
         private string RoomId { get; set; }
-        private bool IsInitator { get; set; }
+        private bool IsInitiator { get; set; }
 
         private CallFragment CallFragment { get; set; }
         private Activity CallPageActivity { get; set; }
@@ -64,21 +64,17 @@ namespace WebRTC.DemoApp.Droid.Renderers
 
         #region Implementations of ICallPageRenderer
 
-
         public SRTCController CreateController() => new SRTCController(this);
 
         public void Connect(SRTCController _controller, Intent _intent) => _controller.Connect(new RoomConnectionParameters
         {
             RoomId = RoomId,
-            IsInitator = IsInitator,
+            IsInitiator = IsInitiator,
             IsLoopback = false,
             RoomUrl = "https://appr.tc/"
         });
 
         public CallFragment CreateCallFragment(Intent _intent) => CallFragment.Create(RoomId, true, true, this);
-
-
-
 
         public void OnPeerFactoryCreated(IPeerConnectionFactory factory)
         {
@@ -151,7 +147,7 @@ namespace WebRTC.DemoApp.Droid.Renderers
 
             var callPage = (CallPage)e.NewElement;
             RoomId = callPage.RoomId;
-            IsInitator = callPage.IsInitator;
+            IsInitiator = callPage.IsInitator;
 
             try
             {

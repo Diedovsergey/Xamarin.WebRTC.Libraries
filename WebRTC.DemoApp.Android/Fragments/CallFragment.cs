@@ -1,8 +1,5 @@
 ﻿// onotseike@hotmail.comPaula Aliu
 
-
-
-
 using Android.Content;
 using Android.OS;
 //using Android.Support.V4.App;
