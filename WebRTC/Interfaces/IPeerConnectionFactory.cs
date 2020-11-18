@@ -20,6 +20,8 @@ namespace WebRTC.Interfaces
 
         IFileVideoCapturer CreateFileCapturer(IVideoSource videoSource, string file);
 
+        IRTCAudioManager CreateAudioManager();
+
         bool StartAecDump(string file, int fileSizeLimitBytes);
         void StopAecDump();
     }

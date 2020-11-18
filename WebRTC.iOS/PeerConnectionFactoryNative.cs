@@ -83,5 +83,10 @@ namespace WebRTC.iOS
         {
             _factory.StopAecDump();
         }
+
+        public IRTCAudioManager CreateAudioManager()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

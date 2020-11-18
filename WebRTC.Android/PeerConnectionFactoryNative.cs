@@ -186,6 +186,11 @@ namespace WebRTC.Android
                 .CreateAudioDeviceModule();
         }
 
+        public IRTCAudioManager CreateAudioManager()
+        {
+            return new RtcAudioManager(_context);
+        }
+
         private class AudioErrorCallbacks : Java.Lang.Object,
             JavaAudioDeviceModule.IAudioRecordErrorCallback,
             JavaAudioDeviceModule.IAudioRecordStateCallback,
