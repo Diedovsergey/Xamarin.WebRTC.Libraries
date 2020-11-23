@@ -2541,13 +2541,16 @@ namespace WebRTC.Android
 			public static int app_name = 2131361831;
 			
 			// aapt resource value: 0x7F0A0028
-			public static int hello = 2131361832;
+			public static int pref_speakerphone_default = 2131361832;
 			
 			// aapt resource value: 0x7F0A0029
-			public static int search_menu_title = 2131361833;
+			public static int pref_speakerphone_key = 2131361833;
 			
 			// aapt resource value: 0x7F0A002A
-			public static int status_bar_notification_info_overflow = 2131361834;
+			public static int search_menu_title = 2131361834;
+			
+			// aapt resource value: 0x7F0A002B
+			public static int status_bar_notification_info_overflow = 2131361835;
 			
 			static String()
 			{

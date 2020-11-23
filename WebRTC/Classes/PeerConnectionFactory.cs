@@ -1,6 +1,4 @@
-﻿// onotseike@hotmail.comPaula Aliu
-using System;
-using WebRTC.Interfaces;
+﻿using WebRTC.Interfaces;
 
 namespace WebRTC.Classes
 {
@@ -66,5 +64,10 @@ namespace WebRTC.Classes
 
         public static void StopInternalTracingCapture() => NativeFactory.StopInternalTracingCapture();
         public static void ShutdownInternalTracer() => NativeFactory.ShutdownInternalTracer();
+
+        public IRTCAudioManager CreateAudioManager()
+        {
+            return _factory.CreateAudioManager();
+        }
     }
 }

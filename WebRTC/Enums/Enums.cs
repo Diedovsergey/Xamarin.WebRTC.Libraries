@@ -41,6 +41,15 @@ namespace WebRTC.Enums
         Require
     }
 
+    public enum AudioDevice
+    {
+        None,
+        SpeakerPhone,
+        WiredHeadset,
+        Earpiece,
+        Bluetooth
+    }
+
     public enum TcpCandidatePolicy : long
     {
         Enabled,

@@ -16,9 +16,6 @@ namespace WebRTC.iOS
         {
             var decoderFactory = new RTCDefaultVideoDecoderFactory();
             var encoderFactory = new RTCDefaultVideoEncoderFactory();
-
-
-
             NativeObject = _factory = new RTCPeerConnectionFactory(encoderFactory, decoderFactory);
         }
 
@@ -82,6 +79,11 @@ namespace WebRTC.iOS
         public void StopAecDump()
         {
             _factory.StopAecDump();
+        }
+
+        public IRTCAudioManager CreateAudioManager()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
